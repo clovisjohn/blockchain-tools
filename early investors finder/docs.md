@@ -11,5 +11,19 @@
 > common_investors(["0x811beed0119b4afce20d2583eb608c6f7af1954f","0xf82d8ec196fb0d56c6b82a8b1870f09502a49f88"],15)
 
 
-...More data later
+# Colab workflow
+
+> !pip install web3
+
+> !git clone https://github.com/clovisjohn/crypto-tools.git
+
+> !python /content/crypto-tools/early\ investors\ finder/main_PoC.py
+
+> execfile ("/content/crypto-tools/early investors finder/main_PoC.py")
+
+> common_investors(pairlst, size) #You can now directly call the funcion
+
+In case of conflict error, restart the runtime
+
+...More data will be added later
 
