@@ -21,9 +21,9 @@
 
 > execfile ("/content/crypto-tools/early investors finder/main_PoC.py")
 
-> common_investors(pairlst, size) #You can now directly call the funcion
+> common_investors(pairlst, size)    #You can now directly call the funcion from the python interpreter
 
-In case of conflict error, restart the runtime
+**In case of conflict error, restart the runtime**
 
 ...More data will be added later
 
