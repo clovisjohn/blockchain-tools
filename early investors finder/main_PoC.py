@@ -2,7 +2,7 @@ import requests
 import json
 import web3
 
-
+#Uniswap subgraph query format
 """{
     swaps(orderBy: timestamp, orderDirection: asc, first:1000,skip:0, where:
     { pair: "0xf82d8ec196fb0d56c6b82a8b1870f09502a49f88", amount0Out_not:0, timestamp_gt:0  }
@@ -12,6 +12,7 @@ import web3
     		timestamp
     }
     }"""
+
 
 def query_builder(last_tstamp,pair):
     '''
