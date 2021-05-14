@@ -73,7 +73,7 @@ def is_contract(addy): #check if the address provided is a contract address
     return: boolean
     '''
     global project_id
-    w3 = web3.Web3(Web3.HTTPProvider("https://mainnet.infura.io/v3/" + project_id)) 
+    w3 = web3.Web3(web3.Web3.HTTPProvider("https://mainnet.infura.io/v3/" + project_id)) 
     checksum_addy=w3.toChecksumAddress(addy)
     if len(w3.eth.getCode(checksum_addy))>0:
         return True
