@@ -17,13 +17,15 @@
 
 > !git clone https://github.com/clovisjohn/crypto-tools.git
 
-> !python /content/crypto-tools/early\ investors\ finder/main_PoC.py
+**Restart the runtime to fix conflict errors**
 
 > execfile ("/content/crypto-tools/early investors finder/main_PoC.py")
 
-> common_investors(pairlst, size)    #You can now directly call the funcion from the python interpreter
+Add your infura project id using the variable project id
 
-**In case of conflict error, restart the runtime**
+>project_id="your-project-id" (keep the quotes)
+
+**You can now directly call the function common_investors from the python interpreter**
 
 ...More data will be added later
 
