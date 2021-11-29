@@ -30,16 +30,14 @@ You can run this script by using `launch.py size:size dex1:addy1 dex2:addy2 dex:
   `uniswap-v3:0xc18360217d8f7ab5e7c516566761ea12ce7f9d72 sushiswap:0x34d7d7aaf50ad4944b70b320acb24c95fa2def7c`
                
 ### Example
-The following line will retrieve addresses that were in the 15000 first to invest in ENS(uniswap-v3) and OHM(considering the pair OHM-DAI from sushiswap)
+The following line will retrieve addresses that were in the 15000 first to invest in ENS(uniswap-v3) and OHM(considering the pair OHM-DAI on sushiswap)
 ```
 launch.py size:15 uniswap-v3:0xc18360217d8f7ab5e7c516566761ea12ce7f9d72 sushiswap:0x34d7d7aaf50ad4944b70b320acb24c95fa2def7c
 ```
-
-**The chat history file can be exported from the telegram desktop app, select export as html**
 
 ## Colab workflow
 ```
 !git clone https://github.com/clovisjohn/crypto-tools.git
 !pip install web3
-project_id="your-project-id" (Your infura project id,keep the quotes) https://ethereumico.io/knowledge-base/infura-api-key-guide/
+project_id="your-project-id" #Your infura project id, keep the quotes
 !python /content/crypto-tools/early\ investors\ finder/launch.py size:size dex1:addy1 dex2:addy2 dex:pair
