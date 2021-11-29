@@ -1,43 +1,43 @@
-# Quick doc
+# Breakdown:
 
-## common_investors(pairlist,size)
-* pairlist: list of uniswap token pairs with dexes names
+*Given a list of tokens and token pairs, return a list of addresses which were the first to buy the token*
 
-  pairlist=[(address,dex_name), (address,dex_name)]
+
+## Requirement
+* Python 3+
+* web3 python library
+* infura project id
+
+
+## Installation
+```
+!git clone https://github.com/clovisjohn/crypto-tools.git
+```
+
+## Usage
+You can also run this script by using `launch.py size:size dex1:addy1 dex2:addy2 dex:pair`
+
+### Arguments
+- size:size : The amount of addresses to scrape for each token. This will be multiplied by 1000. For example, if you give size:10 as argument the script will return the addresses that were in the 15000 first to invest in the specified tokens.
+
+
+- dex1:addy1 : It's the address of the token/pair and the dex where it can be found. Available dexes are uniswap-v3, uniswap-v2, sushiswap(ethereum)
   
-  ```
-  Available dexes are: uniswap-v2, uniswap-v3, sushiswap
-  For the address, you must use the pair contract address if you use uniswap-v2 or sushiswap (OHM-DAI pool contract address for example)
-  If you use uniswap-v3, you must specify the token contract address(OHM contract address for example)
-  ```
+  For uniswap-v2 and sushiswap, you must provide the pair contract address(OHM-ETH, ENS-DAI,etc)\
+  For uniswap-v3 you must provide the token contract address (OHM, ENS, etc)
+  
+  Example(ENS and OHM-DAI): uniswap-v3:0xc18360217d8f7ab5e7c516566761ea12ce7f9d72 sushiswap:0x34d7d7aaf50ad4944b70b320acb24c95fa2def7c
+               
+### Example
+The following line will retrieve token tickers from a telegram chat history using pancakeswap as a source
+```
+launch.py messages.html pancakeswap
+```
 
-  **Example:** 
-  ```
-  lobi=('0xdec41db0c33f3f6f3cb615449c311ba22d418a8d','uniswap-v3')
-  cvxeth=('0x05767d9ef41dc40689678ffca0608878fb3de906','sushiswap')
-  pairlist=[lobi,cvxeth]
-  ```
-* size: size*1000 is the amount of addresses (starting from the first one to buy the token) to scrape for each pair
+**The chat history file can be exported from the telegram desktop app, select export as html**
 
-**Full example**
-> common_investors([('0xdec41db0c33f3f6f3cb615449c311ba22d418a8d','uniswap-v3'),('0x05767d9ef41dc40689678ffca0608878fb3de906','sushiswap')],15)
+## Colab workflow
+```
+!git clone https://github.com/clovisjohn/crypto-filter.git
 
-
-# Colab workflow
-
-> !pip install web3
-
-> !git clone https://github.com/clovisjohn/crypto-tools.git
-
-**Restart the runtime to fix conflict errors**
-
-> execfile ("/content/crypto-tools/early investors finder/main_PoC.py")
-
-Add your infura project id using the variable project id
-
->project_id="your-project-id" (keep the quotes)
-
-**You can now directly call the function common_investors from the python interpreter**
-
-...More data will be added later
-
+!python /content/crypto-filter/releases/list\ matching/launch.py <filepath> <tokenlist>
