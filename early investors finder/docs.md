@@ -41,4 +41,5 @@ launch.py size:15 uniswap-v3:0xc18360217d8f7ab5e7c516566761ea12ce7f9d72 sushiswa
 ```
 !git clone https://github.com/clovisjohn/crypto-tools.git
 !pip install web3
+project_id="your-project-id" (Your infura project id,keep the quotes) https://ethereumico.io/knowledge-base/infura-api-key-guide/
 !python /content/crypto-tools/early\ investors\ finder/launch.py size:size dex1:addy1 dex2:addy2 dex:pair
