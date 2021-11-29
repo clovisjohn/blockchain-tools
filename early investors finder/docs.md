@@ -15,7 +15,7 @@
 ```
 
 ## Usage
-You can also run this script by using `launch.py size:size dex1:addy1 dex2:addy2 dex:pair`
+You can run this script by using `launch.py size:size dex1:addy1 dex2:addy2 dex:pair`
 
 ### Arguments
 - size:size : The amount of addresses to scrape for each token. This will be multiplied by 1000. For example, if you give size:10 as argument the script will return the addresses that were in the 15000 first to invest in the specified tokens.
