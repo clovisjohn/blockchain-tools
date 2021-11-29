@@ -1,6 +1,3 @@
-import requests
-import json
-import web3
 from functions import *
 
 
