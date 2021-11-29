@@ -1,6 +1,6 @@
 # Breakdown:
 
-*Given a list of tokens and token pairs, return a list of addresses which were the first to buy the token*
+*Given a list of tokens and token pairs, return a list of addresses which were the first to buy the tokens*
 
 
 ## Requirement
