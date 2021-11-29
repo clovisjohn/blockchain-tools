@@ -17,14 +17,13 @@ output: api response as a dictionary
         raise Exception("Query failed to run with a {r.status_code}.")
 
 def get_first_investors_list(bundle, size):
-
     
     '''
     pair: pair addy
     size: size*1000 = amount of addys to scrape(duplicates included)
     '''
-    pair=bundle[0]
-    dex=bundle[1]
+    pair=bundle[1]
+    dex=bundle[0]
     keyword='to'
     if dex=='uniswap-v2':
         endpoint="https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2"
@@ -49,7 +48,7 @@ def get_first_investors_list(bundle, size):
             break
         k.append(last_tstamp)                     #add the last timestamp to the list of timestamp
     
-    f=[i["to"] for i in l] #extract addys from the dummy list
+    f=[i[keyword] for i in l] #extract addys from the dummy list
   
     return list(dict.fromkeys(f))
 
