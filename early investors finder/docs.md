@@ -18,7 +18,7 @@
 You can run this script by using `launch.py size:size dex1:addy1 dex2:addy2 dex:pair`
 
 ### Arguments
-- size:size : The amount of addresses to scrape for each token. This will be multiplied by 1000. For example, if you give `size:10` as argument the script will return the addresses that were in the 15000 first to invest in the specified tokens.
+- size:size : The amount of addresses to scrape for each token. This will be multiplied by 1000. For example, if you give `size:10` as argument the script will return the addresses that were in the 10000 first to invest in the specified tokens.
 
 
 - dex1:addy1 : It's the address of the token/pair and the dex where it can be found. Available dexes are uniswap-v3, uniswap-v2, sushiswap(ethereum). You can provide as many token/pair as you want
