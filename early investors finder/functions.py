@@ -3,6 +3,14 @@ import json
 import web3
 from queries import *
 
+
+dexes = {'uniswap-v2':'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2',
+         'sushiswap':'https://api.thegraph.com/subgraphs/name/sushiswap/exchange',
+         'spiritswap':'https://api.thegraph.com/subgraphs/name/layer3org/spiritswap-analytics',
+         'spookyswap':'https://api.thegraph.com/subgraphs/name/eerieeight/spookyswap'
+        }
+
+
 def query_graph(query, endpoint):
     '''
 input: valid uniswap graphql query
@@ -17,7 +25,7 @@ output: api response as a dictionary
         raise Exception("Query failed to run with a {r.status_code}.")
 
 def get_first_investors_list(bundle, size):
-    
+    global dexes
     '''
     pair: pair addy
     size: size*1000 = amount of addys to scrape(duplicates included)
@@ -25,13 +33,12 @@ def get_first_investors_list(bundle, size):
     pair=bundle[1]
     dex=bundle[0]
     keyword='to'
-    if dex=='uniswap-v2':
-        endpoint="https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2"
+    if dex in dexes.keys():
+        endpoint=dexes[dex]
     elif dex=='uniswap-v3':
         endpoint="https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"
         keyword='origin'
-    elif dex=='sushiswap':
-        endpoint='https://api.thegraph.com/subgraphs/name/sushiswap/exchange'
+
     
     l=[] #dummy list to store swaps data
     k=[0,1] #list of timestamp 
