@@ -11,7 +11,7 @@
 
 ## Installation
 ```
-!git clone https://github.com/clovisjohn/crypto-tools.git
+!git clone https://github.com/clovisjohn/blockchain-tools.git
 ```
 
 Add your infura project id in variables.py
@@ -46,6 +46,6 @@ launch.py size:15 uniswap-v3:0xc18360217d8f7ab5e7c516566761ea12ce7f9d72 sushiswa
 
 ## Colab workflow
 ```
-!git clone https://github.com/clovisjohn/crypto-tools.git
+!git clone https://github.com/clovisjohn/blockchain-tools.git
 !pip install web3
-!python /content/crypto-tools/early\ investors\ finder/launch.py size:size dex1:addy1 dex2:addy2 dex:pair
+!python /content/blockchain-tools/early\ investors\ finder/launch.py size:size dex1:addy1 dex2:addy2 dex:pair
