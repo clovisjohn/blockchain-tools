@@ -12,8 +12,7 @@ if l[0][0]=='size':
 else:
   exit("you didn't provide a size")
 
-
-pairs = l[1:]
+pairs = [[x[0],x[1].lower()] for x in l[1:]]
 
 common_inv = common_investors(pairs,size)
 
